@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>USERS</title>
+</head>
+<body>
+	<!-- {{all_users}} -->
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for messages in messages %}
+				<p>{{messages}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}			
+
+	<form action="/users" method="post">
+		<label for="first_name">First Name</label>
+		<input type="text" name="first_name"><br><br>
+		<label for="first_name">Last Name</label>
+		<input type="text" name="last_name"><br><br>
+		<label for="first_name">password</label>
+		<input type="text" name="password"><br><br>
+		<label for="first_name">content</label>
+		<input type="text" name="content"><br><br>
+		<input type="submit" value="Add Usres">
+		
+		
+
+	</form>
+</body>
+</html>
